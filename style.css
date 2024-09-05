@@ -150,7 +150,8 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
+  min-height: 96vh; /* Ensures minimum height but allows sections to grow */
+  height: auto; /* Set height to auto to accommodate content */
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -271,9 +272,10 @@ section {
 }
 
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow containers to wrap */
+  gap: 2rem; /* Add some spacing between items */
+  justify-content: center;
 }
 
 .about-details-container {
@@ -332,8 +334,8 @@ section {
 
 .experience-details-container {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap; /* Add this to allow items to wrap */
+  justify-content: center; /* Adjust spacing */
 }
 
 .article-container {
@@ -360,6 +362,8 @@ article .icon {
 
 #projects {
   position: relative;
+  height: auto; /* Set to auto to allow it to grow dynamically */
+  padding-bottom: 4rem; /* Add some padding to create space between sections */
 }
 
 .color-container {
